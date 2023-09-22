@@ -22,15 +22,4 @@ load your dataset:<br>
 
 result dataset will be:<br>
     ./uploaded_files/deduplicated_<your_dataset>.csv
-    
 
-
-
-# TO DELETE 
-docker run -it -v $(pwd):/usr/home -p 8083:8083 python:3.11.5 bash<br>
-cd usr/home/<br>
-pip install -r requirements.txt<br>
-python -m nltk.downloader stopwords<br>
-uvicorn app.app:app --host 0.0.0.0 --port 8083<br>
-docker run -p 8083:8083 server_dublicates<br>
-docker run -p 5000:5000 my-server<br>
